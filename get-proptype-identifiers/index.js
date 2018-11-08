@@ -1,14 +1,11 @@
-function getRootPropTypeIdentifiers(collection, j) {
+function getPropTypeIdentifiers(collection, j) {
   return collection
     .find(j.ObjectExpression)
     .at(0)
     .map(parentPath => {
       return j(parentPath)
         .find(j.Property)
-        .filter(p => {
-          return p.parentPath.node == parentPath.node;
-        })
-    	.paths();
+    	  .paths();
     })
 }
 
@@ -44,7 +41,7 @@ function transformer(file, api) {
   });
 
   const proptypeIdentifiers = [staticCollection, classCollection].map(collection =>
-    getRootPropTypeIdentifiers(collection, j)
+    getPropTypeIdentifiers(collection, j)
   );
   
   proptypeIdentifiers.forEach(set => {
