@@ -63,6 +63,11 @@ function transformer(file, api) {
           propTypes[key] = type;
         });
       
+      	// Exclude empty ObjectExpressions
+      	if (Object.keys(propTypes).length === 0 ) {
+          return;
+        }
+      
       	// Sort object by keys and stringify
       	const sortedPropTypes = sortObject(propTypes);
       	const propTypesString = JSON.stringify(sortedPropTypes);
