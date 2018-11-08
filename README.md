@@ -22,6 +22,14 @@ Gathers statistics on all unique PropType identifiers and a count of their occur
 **Playground**: Open your console to see some statistics  
 https://astexplorer.net/#/gist/0e9e7994da190383cdccd6b96c4b8729/b0d5b8a354a99a9113f2d3bbcf8d7a06cdcb8136
 
+#### `get-root-proptype-identifiers`
+
+Gathers statistics on all unique **root** PropType identifiers and a count of their occurrences.  
+<u>This version excludes child PropType identifiers (e.g. `logMe: PropTypes.Shape({ butNotMe: PropTypes.any }))`)</u>
+
+**Playground**: Open your console to see some statistics  
+https://astexplorer.net/#/gist/4096621e7d95ad4269e5cd29e6135eb7/df70cc7cdcf0f863c441a134597cf2753360177f
+
 ## React PropType AST Syntax
 
 ### PropTypes defined as <u>static class property</u> (es7) and <u>class property</u> (es6)
