@@ -30,6 +30,13 @@ Gathers statistics on all unique **root** PropType identifiers and a count of th
 **Playground**: Open your console to see some statistics  
 https://astexplorer.net/#/gist/4096621e7d95ad4269e5cd29e6135eb7/df70cc7cdcf0f863c441a134597cf2753360177f
 
+#### `get-proptype-shapes`
+
+Gathers statistics on all `PropType.shape({}) child identifiers.  
+
+**Playground**: Open your console to see some statistics  
+https://astexplorer.net/#/gist/f20fe14331a63e1f4d7c8141fa2f5e09/bdd3c1131bd639a3c72446de91896372a9ca57cd
+
 ## React PropType AST Syntax
 
 ### PropTypes defined as <u>static class property</u> (es7) and <u>class property</u> (es6)
